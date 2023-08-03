@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Seu Pais</h1>
+     seu pais<input type="text" name="pais" id="ipais">
+    <input type="button" value="Verficar" onclick="buscar()">
+    <div id ="brasil" ></div>
+    <script>
+        function buscar(){
+           var pais = document.getElementById('ipais')
+           var res = document.getElementById('brasil')
+           var nac = String(pais.value) 
+           res.innerHTML = `<p>Seu pais é <strong> ${nac}</strong> </p>  `
+           if (nac =='brasil' || nac =='brasil' ){
+            res.innerHTML += ` <p>Voce é <strong>brasileiro </strong> <p>`
+            
+           }
+           else {
+            res.innerHTML += `Voce é <strong>Estrangeiro </strong> `
+           }
+        }
+      
+
+    </script>
+    
+</body>
+</html>
